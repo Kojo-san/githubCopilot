@@ -48,7 +48,13 @@ player_score = 0
 computer_score = 0
 choices = ['rock', 'paper', 'scissors']
 while True:
-    player_choice = console.input("[bold green]Your choice (rock/paper/scissors/quit): [/]").lower()
+    player_choice = console.input("[bold green]Your choice (rock/paper/scissors/r/p/s/quit): [/]").lower()
+    if player_choice == 'r':
+        player_choice = 'rock'
+    elif player_choice == 'p':
+        player_choice = 'paper'
+    elif player_choice == 's':
+        player_choice = 'scissors'
     if player_choice == 'quit':
         print(Fore.MAGENTA + Style.BRIGHT + "Thanks for playing! Final Scores:")
         print(Fore.CYAN + f"Player: {player_score} | Computer: {computer_score}")
